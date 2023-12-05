@@ -57,7 +57,10 @@ a:link, a:visited {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
+  transition-property: background-color;
+  transition-duration: 400ms;
 }
+
 
 h1 > a:link, h1 > a:visited {
   text-transform: none;
