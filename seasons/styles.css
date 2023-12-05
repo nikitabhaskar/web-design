@@ -1,0 +1,134 @@
+/* Stylesheet for Seasons Website */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+  margin: 0;
+}
+
+#container {
+  max-width: 60em;
+  margin: auto;
+}
+
+header, nav, footer {
+  padding: 1em;
+}
+
+h1, p, nav {
+  font-family: Quicksand, sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition-property: opacity;
+  transition-duration: 500ms;
+}
+
+article {
+  padding: 1em;
+  padding-bottom: 0;
+}
+
+article > p {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1 > a:link, h1 > a:visited {
+  text-transform: none;
+}
+
+a:hover {
+  background-color: magenta;
+}
+
+a:active {
+  background-color: yellow;
+}
+
+a.seasons:hover {
+/*  opacity: 0.5;*/
+  background-color: transparent;
+}
+
+a.seasons:active {
+/*  opacity: 1;*/
+  background-color: transparent;
+}
+
+/* media queries for layout */
+
+@media (min-width: 30em) {
+
+  nav {
+    flex-direction: row;
+  }
+
+  nav > a {
+    margin-right: 1em;
+  }
+
+}
+
+@media (min-width: 45em) {
+
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article {
+    padding-top: 0;
+  }
+
+}
+
+/* media query for dark mode */
+
+@media only screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white; /* text color */
+  }
+
+  a:link, a:visited {
+    color: white;
+  }
+
+  a:hover {
+    background-color: green;
+  }
+
+  a:active {
+    background-color: blue;
+  }
+
+  .selected {
+    background-color: blue;
+  }
+
+}
